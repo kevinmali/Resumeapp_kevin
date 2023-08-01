@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:untitled/Screens/Achievement.dart';
 import 'package:untitled/Screens/Carrier_Objective.dart';
@@ -6,6 +7,7 @@ import 'package:untitled/Screens/Declaration.dart';
 import 'package:untitled/Screens/Eduction_page.dart';
 import 'package:untitled/Screens/Experiences_page.dart';
 import 'package:untitled/Screens/Hobbies.dart';
+import 'package:untitled/Screens/Pdf_page.dart';
 import 'package:untitled/Screens/Personal_Details.dart';
 import 'package:untitled/Screens/Project.dart';
 import 'package:untitled/Screens/Refernces.dart';
@@ -35,6 +37,7 @@ void main() {
       'Achievement': (context) => const Achievements(),
       'Refernce': (context) => const Refernces(),
       'Declaration': (context) => const Declaration(),
+      'pdf' : (context) => pdf_page(),
     },
   ));
 }

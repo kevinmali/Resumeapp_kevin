@@ -48,6 +48,7 @@ class Globals {
   static String kdescription = "";
   static String skills1 = "";
   static String skills2 = "";
+  static String imagepath = "";
 
   static TextEditingController namecontroller = TextEditingController();
   static TextEditingController emailcontroller = TextEditingController();
