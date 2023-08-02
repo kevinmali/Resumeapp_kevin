@@ -22,14 +22,15 @@ class _pdf_pageState extends State<pdf_page> {
     pdf.addPage(pw.Page(pageFormat:PdfPageFormat.a4,build:(context)=>
         pw.Center(
           child : pw.Column(children: [
+
               pw.Container(
                 height: 200,
                 width: 200,
-                // decoration: pw.BoxDecoration(
-                //   image: pw.DecorationImage(
-                //     image: pw.MemoryImage(File(Globals.imagepath).readAsBytesSync(),),
-                //   )
-                // )
+                decoration: pw.BoxDecoration(
+                  image: pw.DecorationImage(
+                    image: pw.MemoryImage(File(Globals.imagepath).readAsBytesSync(),),
+                  ),
+                ),
               ),
             pw.Text("${Globals.name}",style: pw.TextStyle(fontSize: 35),),
             pw.Text("${Globals.email}",style: pw.TextStyle(fontSize: 35),),

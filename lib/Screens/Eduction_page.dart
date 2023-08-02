@@ -86,6 +86,7 @@ class _EductionState extends State<Eduction> {
                 children: [
                   Container(
                     margin: EdgeInsets.all(40),
+                    padding: EdgeInsets.all(20),
                     height: h * .70,
                     width: w * .9,
                     decoration: BoxDecoration(
