@@ -65,6 +65,7 @@ class _PersonalState extends State<Personal> {
               children: [
                 Container(
                   margin: EdgeInsets.all(40),
+                  padding: EdgeInsets.all(20),
                   height: h * .72,
                   width: w * .9,
                   decoration: BoxDecoration(

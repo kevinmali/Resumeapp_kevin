@@ -27,7 +27,7 @@ class _TechnicalState extends State<Technical> {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Globals.background,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 140,
         backgroundColor: Globals.bgColor,
@@ -61,7 +61,7 @@ class _TechnicalState extends State<Technical> {
                 padding: EdgeInsets.all(20),
                 height: h * 0.7,
                 width: w * 0.9,
-                color: Colors.cyan,
+                color: Globals.background,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [

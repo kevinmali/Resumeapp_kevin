@@ -1,6 +1,6 @@
-import 'dart:io';
-
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
@@ -17,28 +17,49 @@ class _pdf_pageState extends State<pdf_page> {
 
   final pdf = pw.Document();
 
-  generatepdf(){
+
+
+  generatepdf() async {
+    final ByteData bytes = await rootBundle.load('lib/utils/Assets/splacelogo/resumelogo.jpg');
+    final logobytes = bytes.buffer.asUint8List();
+    final ByteData bytes1 = await rootBundle.load('lib/utils/Assets/splacelogo/images.jpeg');
+    final logobytes1 = bytes1.buffer.asUint8List();
 
     pdf.addPage(pw.Page(pageFormat:PdfPageFormat.a4,build:(context)=>
-        pw.Center(
-          child : pw.Column(children: [
-
-              pw.Container(
-                height: 200,
-                width: 200,
-                decoration: pw.BoxDecoration(
-                  image: pw.DecorationImage(
-                    image: pw.MemoryImage(File(Globals.imagepath).readAsBytesSync(),),
+        pw.Center( child :
+          pw.Column(
+            crossAxisAlignment: pw.CrossAxisAlignment.start,
+            children: [
+              pw.Row(
+                children: [
+                  pw.Container(
+                  height: 150,
+                  width: 150,
+                  decoration: pw.BoxDecoration(
+                    image: pw.DecorationImage(
+                      image: pw.MemoryImage(logobytes,),
+                    ),
                   ),
                 ),
+                  pw.Spacer(),
+                  pw.Container(
+                    height: 200,
+                    width: 200,
+                    decoration: pw.BoxDecoration(
+                      image: pw.DecorationImage(
+                        image: pw.MemoryImage(logobytes1),
+                      ),
+                    ),
+                  ),
+          ],
               ),
+            pw.Spacer(),
             pw.Text("${Globals.name}",style: pw.TextStyle(fontSize: 35),),
             pw.Text("${Globals.email}",style: pw.TextStyle(fontSize: 35),),
             pw.Text("${Globals.number}",style: pw.TextStyle(fontSize: 35),),
           ],),
         ),
-    ));
-
+    ),);
   }
   @override
   void initState() {

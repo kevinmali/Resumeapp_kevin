@@ -447,7 +447,9 @@ class _ContactState extends State<Contact> {
                                         image = await Globals.picker.pickImage(
                                           source: ImageSource.camera,
                                         );
-                                        setState(() {});
+                                        setState(() {
+                                          Globals.imagepath = image!.path;
+                                        });
                                       },
                                       icon: const Icon(
                                         Icons.camera_alt,
@@ -460,9 +462,7 @@ class _ContactState extends State<Contact> {
                                               await Globals.picker.pickImage(
                                             source: ImageSource.gallery,
                                           );
-                                          setState(() {
-                                            Globals.imagepath = image!.path;
-                                          });
+                                          setState(() {});
                                         },
                                         icon: const Icon(
                                           Icons.photo,

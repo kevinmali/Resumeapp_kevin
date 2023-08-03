@@ -88,6 +88,7 @@ class _ReferncesState extends State<Refernces> {
               children: [
                 Container(
                   margin: const EdgeInsets.all(30),
+                  padding: EdgeInsets.all(20),
                   height: h * .60,
                   width: w * .9,
                   decoration: BoxDecoration(
