@@ -50,6 +50,17 @@ class Globals {
   static String skills2 = "";
   static String imagepath = "";
 
+  static bool botton = false;
+  static String? dis;
+  static String? date;
+  static String? city;
+
+  static String? titl;
+  static String? tecono;
+  static String? des;
+  static bool? c = false;
+  static bool? cp = false;
+
   static TextEditingController namecontroller = TextEditingController();
   static TextEditingController emailcontroller = TextEditingController();
   static TextEditingController numbercontroller = TextEditingController();
