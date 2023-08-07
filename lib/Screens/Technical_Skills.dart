@@ -14,7 +14,6 @@ class _TechnicalState extends State<Technical> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     AllController.add(TextEditingController());
     AllController.add(TextEditingController());

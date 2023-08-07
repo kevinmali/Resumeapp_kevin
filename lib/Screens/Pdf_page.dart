@@ -20,9 +20,9 @@ class _pdf_pageState extends State<pdf_page> {
 
 
   generatepdf() async {
-    final ByteData bytes = await rootBundle.load('lib/utils/Assets/splacelogo/resumelogo.jpg');
+    final ByteData bytes = await rootBundle.load('lib/utils/Assets/splacelogo/download.jpg');
     final logobytes = bytes.buffer.asUint8List();
-    final ByteData bytes1 = await rootBundle.load('lib/utils/Assets/splacelogo/images.jpeg');
+    final ByteData bytes1 = await rootBundle.load('lib/utils/Assets/splacelogo/logo.jpeg');
     final logobytes1 = bytes1.buffer.asUint8List();
 
     pdf.addPage(pw.Page(pageFormat:PdfPageFormat.a4,build:(context)=>
@@ -33,8 +33,8 @@ class _pdf_pageState extends State<pdf_page> {
               pw.Row(
                 children: [
                   pw.Container(
-                  height: 150,
-                  width: 150,
+                  height: 200,
+                  width: 200,
                   decoration: pw.BoxDecoration(
                     image: pw.DecorationImage(
                       image: pw.MemoryImage(logobytes,),
@@ -63,7 +63,6 @@ class _pdf_pageState extends State<pdf_page> {
   }
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     generatepdf();
   }
