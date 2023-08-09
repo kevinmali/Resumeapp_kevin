@@ -128,7 +128,7 @@ class _TechnicalState extends State<Technical> {
           controller: AllController[i],
           decoration: InputDecoration(
             hintText: "  C Programing, Web Technical ",
-            hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
+            hintStyle: TextStyle(color: Globals.textColor),
           ),
         ),
       ),
