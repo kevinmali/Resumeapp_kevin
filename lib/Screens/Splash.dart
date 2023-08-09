@@ -13,7 +13,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), () {
+    Timer(Duration(seconds: 5), () {
       Navigator.pushReplacementNamed(context, 'sing');
     });
     return Scaffold(
@@ -22,12 +22,12 @@ class _SplashState extends State<Splash> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: 200,
-              width: 200,
+              height: 400,
+              width: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image:
-                      AssetImage("lib/utils/Assets/splacelogo/resumelogo.jpg"),
+                      AssetImage("lib/utils/Assets/splacelogo/images.png"),
                   fit: BoxFit.fill,
                 ),
               ),
